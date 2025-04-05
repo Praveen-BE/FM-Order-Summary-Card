@@ -1,3 +1,22 @@
+/**** Root Varibales start *****/
+:root {
+  --clr-primary-250: hsl(225, 100%, 94%);
+  --clr-secondary-800: hsl(245, 75%, 52%);
+
+  --clr-neutral-200: hsl(225, 100%, 98%);
+  --clr-neutral-500: hsl(224, 23%, 55%);
+  --clr-neutral-800: hsl(223, 47%, 23%);
+
+  --fs-normal: 16px;
+
+  --ff-base: "Red Hat Display", sans-serif;
+
+  --fw-normal: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+}
+/**** Root Varibales End *****/
+
 /****** joshwcomeau reset code start *****/
 
 /* 1. Use a more-intuitive box-sizing model */
@@ -76,3 +95,203 @@ h6 {
   } */
 
 /****** joshwcomeau reset code End *****/
+
+/******** Body Start  *********/
+body {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--fs-normal);
+  font-weight: var(--fw-normal);
+  font-family: var(--ff-base);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-color: var(--clr-primary-250);
+  text-align: center;
+  background-image: url(./images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100vw 25vh;
+}
+
+@media (min-width: 600px) {
+  body {
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-size: 100vw 50vh;
+    background-color: var(--clr-primary-250);
+  }
+}
+
+/******** Body End  *********/
+
+/******** Card code Start  *********/
+
+.card {
+  display: grid;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0px 1px 20px -10px hsl(from var(--clr-secondary-800) h s l/0.5);
+}
+
+@media (min-width: 435px) {
+  .card {
+    max-width: 438px;
+  }
+}
+
+.card__content {
+  display: grid;
+  gap: 1rem;
+  padding-top: 1rem;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+  padding-bottom: 1rem;
+  background-color: var(--clr-neutral-200);
+}
+
+@media (min-width: 600px) {
+  .card__content {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    gap: 1rem;
+  }
+}
+
+.card__content__data {
+  display: grid;
+  gap: 0.6rem;
+  padding: 1rem;
+
+  & h1 {
+    font-weight: var(--fw-black);
+    color: var(--clr-neutral-800);
+    font-size: calc(var(--fs-normal) / 0.756);
+  }
+  & p {
+    color: var(--clr-neutral-500);
+  }
+
+  @media (min-width: 600px) {
+    h1 {
+      font-size: calc(var(--fs-normal) / 0.55);
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .card__content__data {
+    gap: 1rem;
+  }
+}
+
+.card__content__plan {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(from var(--clr-primary-250) h s l/0.3);
+  padding: 1rem;
+  border-radius: 1rem;
+  flex-wrap: wrap;
+
+  & .card__content__plan__left {
+    display: flex;
+    flex-wrap: wrap;
+
+    & .card__content__plan__detail {
+      display: grid;
+      justify-content: left;
+      text-align: start;
+      margin-left: 1rem;
+
+      & .card__content__plan__detail__catagory {
+        font-weight: var(--fw-black);
+      }
+
+      & .card__content__plan__detail__price {
+        color: var(--clr-neutral-500);
+      }
+    }
+  }
+
+  & .card__content__plan__changeBtn {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background: none;
+    color: var(--clr-secondary-800);
+    font-weight: var(--fw-black);
+    text-decoration: underline;
+  }
+
+  & .card__content__plan__changeBtn:hover {
+    color: hsl(from var(--clr-secondary-800) h s l/0.7);
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 375px) {
+  .card__content__plan {
+    padding: 1.5rem;
+  }
+  .card__content__plan__changeBtn {
+    font-size: calc(var(--fs-normal) / 1.3);
+  }
+  .card__content__plan__detail__catagory {
+    font-size: calc(var(--fs-normal) / 1.1);
+  }
+  .card__content__plan__detail__price {
+    font-size: calc(var(--fs-normal) / 1.1);
+  }
+}
+
+@media (min-width: 600px) {
+  .card__content__plan {
+    padding: 1.6rem;
+  }
+  .card__content__plan__changeBtn {
+    font-size: calc(var(--fs-normal));
+    font-size: calc(var(--fs-normal) / 1.1);
+  }
+  .card__content__plan__detail__catagory {
+    font-size: var(--fs-normal);
+  }
+}
+
+.orderBtn {
+  display: grid;
+  gap: 1rem;
+
+  & .orderBtn__proceed {
+    padding: 0.8rem;
+    background-color: var(--clr-secondary-800);
+    font-weight: var(--fw-black);
+    color: var(--clr-primary-250);
+    border-radius: 0.8rem;
+  }
+
+  & .orderBtn__proceed:hover {
+    background-color: hsl(from var(--clr-secondary-800) h s l/0.7);
+  }
+
+  & .orderBtn__cancel {
+    padding: 0.5rem;
+    outline: none;
+    background: none;
+    box-shadow: none;
+    border: none;
+    font-weight: var(--fw-black);
+    color: var(--clr-neutral-500);
+  }
+
+  & .orderBtn__cancel:hover {
+    color: var(--clr-neutral-800);
+  }
+}
+
+@media (min-width: 600px) {
+  .orderBtn {
+    margin-top: 1rem;
+  }
+}
+
+/******** Card End  *********/

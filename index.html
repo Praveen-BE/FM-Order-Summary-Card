@@ -14,10 +14,18 @@
 
     <title>Frontend Mentor | Order summary card</title>
 
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- My CSS File -->
     <link rel="stylesheet" href="./style.css" />
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
+    <!-- <style>
       .attribution {
         font-size: 11px;
         text-align: center;
@@ -25,7 +33,7 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
-    </style>
+    </style> -->
   </head>
   <body>
     <main>
@@ -38,7 +46,7 @@
         </picture>
         <div class="card__content">
           <div class="card__content__data">
-            <h1 class="card__content__data__title">Order Summary</h1>
+            <h1>Order Summary</h1>
             <p>
               You can now listen to millions of songs, audiobooks, and podcasts
               on any device anywhere you like!
@@ -56,20 +64,16 @@
                   />
                 </g>
               </svg>
-              <div class="card__content__plan__left__detail">
-                <p class="card__content__plan__left__detail__catagory">
-                  Annual Plan
-                </p>
-                <p class="card__content__plan__left__detail__price">
-                  $59.99/year
-                </p>
+              <div class="card__content__plan__detail">
+                <p class="card__content__plan__detail__catagory">Annual Plan</p>
+                <p class="card__content__plan__detail__price">$59.99/year</p>
               </div>
             </div>
-            <div class="card__content__plan__right">Change</div>
+            <button class="card__content__plan__changeBtn">Change</button>
           </div>
-          <div class="btnGroup">
-            <button class="btnGroup__proceed">Proceed to Payment</button>
-            <button class="btnGroup__proceed">Cancel Order</button>
+          <div class="orderBtn">
+            <button class="orderBtn__proceed">Proceed to Payment</button>
+            <button class="orderBtn__cancel">Cancel Order</button>
           </div>
         </div>
       </article>
