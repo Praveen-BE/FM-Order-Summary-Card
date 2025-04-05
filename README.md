@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [FM-Order-Summary-Card](https://github.com/Praveen-BE/FM-Order-Summary-Card)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [FM-Order-Summary-Card](https://praveen-be.github.io/FM-Order-Summary-Card/)
 
 ## My process
 
